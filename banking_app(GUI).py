@@ -7,7 +7,7 @@ window = Tk()
 
 window.title("Happyboy's Banking System")
 window.configure(bg='powderblue')
-window.geometry("600x600")
+window.geometry("500x500")
 
 def fin_sign():
 
@@ -66,7 +66,7 @@ def Register():
 
     global RegisterScreen
     RegisterScreen = Toplevel(window)
-    RegisterScreen.geometry("500x550")
+    RegisterScreen.geometry("500x650")
     RegisterScreen.title("Register")
     Label(RegisterScreen, text="Set Up Your Account \n And Enjoy the Service!", font=(40)).grid(row=0, sticky=N, pady=10)
     Label(RegisterScreen, text="Name", font=(30)).grid(row=2, sticky=W, pady=10)
@@ -254,22 +254,22 @@ def log_in():
     TempLogPw = StringVar()
     LogInScreen = Toplevel(window)
     LogInScreen.title("Log In")
-    LogInScreen.geometry("500x450")
+    LogInScreen.geometry("500x650")
     Label(LogInScreen, text="Welcome Back! Log into your Account!", font=(80)).grid(row=0, sticky=N)
     Label(LogInScreen, text="Username", font=(20)).grid(row=1, sticky=W)
     Label(LogInScreen, text="Password", font=(20)).grid(row=2, sticky=W)
     LogNotifications = Label(LogInScreen, font=(20))
     LogNotifications.grid(row=4, sticky=N)
-    Entry(LogInScreen, textvar=TempLogName).grid(row=1, column=1, padx=5)
-    Entry(LogInScreen, textvar=TempLogPw,show="*").grid(row=2, column=1, padx=5)
+    Entry(LogInScreen, textvar=TempLogName).grid(row=1, column=0, padx=5)
+    Entry(LogInScreen, textvar=TempLogPw,show="*").grid(row=2, column=0, padx=3)
     Button(LogInScreen, text="Login", command=dashboard, width=40,font=(20)).grid(row=7, sticky=W, pady=5, padx=4)
     Button(LogInScreen, text="Show Password", command=showsignlog,font=(18)).grid(row=6, sticky=W, pady=10)
     Button(LogInScreen, text="Hide Password", command=hidesignlog,font=(18)).grid(row=6, sticky=E, pady=10)
 
 Label(window, bg='orange', text="Welcome to Happyboy's Banking Application \n Register to start Banking with us", font=(100)).grid(row=0, sticky=N, pady=50, padx=30)
 
-Button(window, bg='yellow', text="Register", font=(60), width=40,height=4, command=Register).grid(row=4, sticky=N, pady=10, padx=120)
+Button(window, bg='blue', text="Register", font=(60), width=40,height=4, command=Register).grid(row=4, sticky=N, pady=10, padx=120)
 
-Button(window, bg='yellow', text="Login", font=(60), width=40, height=4,command=log_in).grid(row=6, sticky=N, pady=10, padx=120)
+Button(window, bg='blue', text="Login", font=(60), width=40, height=4, command=log_in).grid(row=6, sticky=N, pady=10, padx=120)
 
 window.mainloop()
