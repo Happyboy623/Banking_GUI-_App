@@ -30,7 +30,7 @@ def fin_sign():
         notifications.config(fg='red', text="Make sure your PASSWORD has NUMBERS in it")
         return
     elif re.search('[A-Z]', password) is None:
-        notifications.config(fg='red', text="Make sure your PASSWORD has a UPPER_CASE LATTERS in it")
+        notifications.config(fg='red', text="Make sure your PASSWORD has a UPPER_CASE LETTERS in it")
         return
     regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$'
 
@@ -120,7 +120,6 @@ def dashboard():
                 Button(dashboard, text="Deposit", width=30, font=(20),command=deposit).grid(row=5, sticky=N, padx=10, pady=10)
                 Button(dashboard, text="Withdraw", width=30, font=(20),command=withdraw).grid(row=6, sticky=N, padx=10, pady=10)
                 Button(dashboard, text="Check Balance", width=30, font=(20), command=balance).grid(row=7, sticky=N, padx=10, pady=10)
-
                 return
 
         else:
